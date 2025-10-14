@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_contoh_trpl_24_a1/home.dart';
 import 'profil_screen.dart';
 
 class PenghitungScreen extends StatefulWidget {
@@ -26,6 +27,7 @@ class _PenghitungScreenState extends State<PenghitungScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.greenAccent,
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +38,18 @@ class _PenghitungScreenState extends State<PenghitungScreen> {
               menghitung();
             }, 
             child: Text("Hitung"),),
-            TextButton(onPressed: (){}, child: Text("Pindah Profil"))
+            TextButton(onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (_)=> ProfilScreen()));
+
+
+            }, child: Text("Pindah Profil")),
+            
+         ElevatedButton(onPressed: (){}, child: Text("Tombol")),
+         
+          TextButton(onPressed: (){
+              Navigator.pop(context);      
+            }, 
+            child: Text("Kembali")),
           ],
         ),
       ),

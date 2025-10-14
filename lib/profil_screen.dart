@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:projek_contoh_trpl_24_a1/home.dart';
+import 'package:projek_contoh_trpl_24_a1/penghitung_screen.dart';
 
 class ProfilScreen extends StatelessWidget {
-  const ProfilScreen({super.key});
+  const ProfilScreen({super.key, this.username });
+
+  final String? username;
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +13,7 @@ class ProfilScreen extends StatelessWidget {
       backgroundColor: Colors.yellow,
       appBar: AppBar(
         backgroundColor: Colors.greenAccent,
-        title: Text("Profil"),
+        title: Text("Profil $username"),
       ),
       body: Center(
         child: ListView(
@@ -17,6 +21,17 @@ class ProfilScreen extends StatelessWidget {
             Image.network("https://udb.ac.id/storage/app/media/uploaded-files/LOGO---BOTTOM-TEXT.jpg",height: 100,),
             Image.asset("asset/luffy.webp",height: 200,),
             Card(child: Text("Luffy",style: TextStyle(fontSize: 30,color: Colors.red,),)),
+             TextButton(onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (_)=> PenghitungScreen()));
+            }, child: Text("Pindah Penghitung")),
+
+             TextButton(onPressed: (){
+              
+                        Navigator.pop(context);
+            }, 
+            child: Text("Kembali")),
+
+
             Text("alamat"),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
