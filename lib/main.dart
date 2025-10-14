@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_contoh_trpl_24_a1/home.dart';
 import 'profil_screen.dart';
 import 'penghitung_screen.dart';
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: PenghitungScreen(),
+      home: HomeScreen(),
     );
   }
 }
