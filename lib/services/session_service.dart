@@ -2,6 +2,8 @@ import 'package:get_storage/get_storage.dart';
 
 class SessionService {
   final _box = GetStorage();
+
+
   static const _kIsLoggedIn = 'isLoggedIn';
   static const _kUser = 'user'; // Map<String, dynamic> sederhana
 
