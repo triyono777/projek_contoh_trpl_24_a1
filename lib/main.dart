@@ -4,7 +4,9 @@ import 'package:get_storage/get_storage.dart';
 
 import 'pages/login_page.dart';
 import 'pages/home_page.dart';
+import 'pages/login_validasi_page.dart';
 import 'services/session_service.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,8 +23,8 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'GetStorage + Get (Simple)',
-      home: startPage, // tanpa GetPage/named routes
+      title: 'Validasi Form Login',
+      home: LoginValidasiPage(), // tanpa GetPage/named routes
     );
   }
 }
