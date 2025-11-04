@@ -21,8 +21,9 @@ class _HomePageState extends State<HomePage> {
 
   int _bottomNavIndex = 0;
 
-  Future<void> _openProfile() {
-    return Get.to(() => const ProfilePage());
+   openProfile() {
+     Get.to(() =>  ProfilePage());
+    
   }
 
   Future<void> _logout() async {
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               tooltip: 'Profil',
               icon: const Icon(Icons.person),
               onPressed: () async {
-                await _openProfile();
+                await openProfile();
               },
             ),
           IconButton(
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> {
           _HomeTab(name: name),
           _ProfileTab(
             userData: u,
-            onEditProfile: _openProfile,
+            onEditProfile: openProfile(),
           ),
           _LoginShortcutTab(
             onGoToLogin: _logout,
